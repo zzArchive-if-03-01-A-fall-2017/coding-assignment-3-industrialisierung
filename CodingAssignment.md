@@ -43,4 +43,4 @@ All coding assignments will get checked. Most common reasons that your assignmen
 - Submitted code is visually sloppy and hard to read
 - Content is not sufficient to evaluate whether the technical implementations are sufficient.
 
-Finally check the [Rubrics](Rubrics.md) (Units 1 to 5 and "All" at the end of the table) to remember which criteria we use when checking your code.
+Finally check the [Rubrics](Rubrics.md) (Units 1 to 6 and "All" at the end of the table) to remember which criteria we use when checking your code.
