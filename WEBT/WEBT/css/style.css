@@ -1,0 +1,74 @@
+body{
+	background-color:#303030;
+}
+
+h1{
+  text-align: center;
+	color: white;
+}
+em{
+	color: white;
+}
+strong{
+	color: white;
+}
+h2{
+	color: white;
+}
+h3{
+	color: #8F8787;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+a{
+	color: lightgreen;
+}
+p{
+	color: white;
+}
+
+.header-image {
+  background-image:url("../img/intro-bg.jpg");
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.header-text{
+	font-family: "droid-sans";
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+	/*
+  background: -webkit-linear-gradient(#483D8B, black);
+  opacity: 0.3;
+  this is needed to be used over the header...
+*/
+/* Buttons for index
+.header-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header-text button:hover {
+  background-color: #555;
+  color: white;
+}
+*/
