@@ -33,7 +33,7 @@ body, html {
 }
 .header-text:hover
 {
-	color: #888777; 
+	color: #888777;
    -webkit-transition: color 1s ease-in;
    -moz-transition: color 1s ease-in;
    -o-transition: color 1s ease-in;
@@ -58,4 +58,3 @@ body, html {
 }
 .animate-top{animation:animatetop 1.5s}@keyframes animatetop{from{top:-10%;opacity:0} to{top:34%;opacity:1}}
 .animate-fading{animation:fading 5s}@keyframes fading{0%{opacity:0}100%{opacity:1}}
-
