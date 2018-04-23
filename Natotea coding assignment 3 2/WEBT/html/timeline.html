@@ -3,40 +3,46 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style2.css">
+    <script src="../html/data.js" charset="utf-8"></script>
     <title>Home</title>
   </head>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
 
-    <div id="id02" class="modalForRegister">
-      <form class="modal-content animate" action="/action_page.php">
+    <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
+    <button onclick="document.getElementById('register').style.display='block'" style="width:auto;">Register</button>
+
+    <div id="register" class="modalForRegister">
+      <form class="modal-content animate">
         <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
           <img src="../img/Industrie.jpg" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
-          <label for="uname"><b>Username</b></label>
+          <label id="uname"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="uname" required>
 
-          <label for="psw"><b>Password</b></label>
+          <label id="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
 
-          <label for="psw"><b>Repeat Password</b></label>
+          <label id="psw"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw" required>
+          
 
           <button type="submit">Register</button>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+        <div class="container signin">
+          <p>Already have an account? <a href="login.html">Sign in</a>.</p>
         </div>
       </form>
     </div>
-    <div id="id01" class="modal">
-      <form class="modal-content animate" action="/action_page.php">
+    <div id="login" class="modal">
+      <form class="modal-content animate">
         <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
           <img src="../img/Industrie.jpg" alt="Avatar" class="avatar">
         </div>
 
@@ -54,23 +60,27 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
       </form>
     </div>
-
     <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
     </script>
-
-    </body>
-    </html>
+    <script>
+      // Get the modal
+      var modal = document.getElementById('login');
+      var modalForRegister = document.getElementById('register');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+          else if (event.target == modalForRegister) {
+              modalForRegister.style.display = "none";
+          }
+      }
+    </script>
+  </body>
+</html>
