@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style2.css">
-    <script src="../html/data.js" charset="utf-8"></script>
+    <script type="module" src="../html/data.js" charset="utf-8"></script>
     <title>Home</title>
   </head>
 
@@ -18,24 +18,24 @@
         </div>
 
         <div class="container">
-          <label id="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="unameRegister"><b>Username</b></label>
+          <input id="unameRegister"type="text" placeholder="Enter Username" name="uname" required>
 
-          <label id="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="pswRegister"><b>Password</b></label>
+          <input id="pswRegister" type="password" placeholder="Enter Password" name="psw" required>
 
-          <label id="psw"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw" required>
-          
+          <label for="pswRegister2"><b>Repeat Password</b></label>
+          <input id="pswRegister2"type="password" placeholder="Repeat Password" name="psw" required>
 
-          <button type="submit">Register</button>
+
+          <button type="submitRegister">Register</button>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
         <div class="container signin">
-          <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+          <p>Already have an account? <button onclick="document.getElementById('login').style.display='block'" >Login</button></p>
         </div>
       </form>
     </div>
@@ -45,13 +45,12 @@
           <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
           <img src="../img/Industrie.jpg" alt="Avatar" class="avatar">
         </div>
-
         <div class="container">
           <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
 
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input id ="psw" type="password" placeholder="Enter Password" name="psw" required>
 
           <button type="submit">Login</button>
           <label>
@@ -65,9 +64,6 @@
         </div>
       </form>
     </div>
-    <script>
-
-    </script>
     <script>
       // Get the modal
       var modal = document.getElementById('login');
