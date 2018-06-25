@@ -8,7 +8,7 @@ window.onload = function()
     xhr.open('POST', url);
     xhr.setRequestHeader("Content-type","application/json");
     xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4 && xhr.status === 200) {
+      if (xhr.readyState == 4) {
         alert("Registration succesful");
       }
     }
