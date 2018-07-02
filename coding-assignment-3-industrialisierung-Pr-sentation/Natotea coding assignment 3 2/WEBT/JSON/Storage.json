@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Superuser",
+      "password": "leotux"
+    },
+    {
+      "username": "p.bauer",
+      "password": "p.bauer",
+      "id": 2
+    },
+    {
+      "username": "Sandro",
+      "password": "Rexibeni2112",
+      "id": 3
+    },
+    {
+      "username": "Lukas",
+      "password": "Lukas",
+      "id": 4
+    }
+  ]
+}
