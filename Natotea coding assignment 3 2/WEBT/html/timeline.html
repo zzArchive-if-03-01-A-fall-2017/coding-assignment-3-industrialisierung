@@ -2,8 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../css/timeLine.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/TimeLine.css"/>
     <script type="module" src="../html/data.js" charset="utf-8"></script>
+    <script src="../js/d3.v2.min.js" type="application/javascript"></script>
+    <script src="../js/timeknots.js" type="application/javascript"></script>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <title>Home</title>
   </head>
 
@@ -60,43 +64,84 @@
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
-        <div class="container signin">
-          <p>Already have an account? <button onclick="document.getElementById('login').style.display='block' ">Login</button></p>
-        </div>
       </form>
     </div>
-    <h1>Amerika</h1>
-      <ul class="progressbar">
-        <li class="active">Natotea</li>
-        <li class="active">Sandro</li>
-        <li class="active">2Ahif </li>
-      </ul>
+    <div class="fluid-row">
+            <div class="span3">
+                 <h2>TimeLine America</h2>
+                 <h5>Part of Kubrick's Filmography form Wikipedia</h5>
+                 <div id="timeline1" style="width:500px;"></div>
+             </div>
+         </div>
+         <div class="fluid-row">
+             <div class="span3">
+                  <h2>TimeLine Europe</h2>
+                  <h5>same thing here, but changed</h5>
+                  <div id="timeline2" style="width:500px;"></div>
+              </div>
+          </div>
+          <div class="fluid-row">
+              <div class="span3">
+                   <h2>TimeLine Asia</h2>
+                   <h5>almost same thing as in America</h5>
+                   <div id="timeline3" style="width:500px;"></div>
+               </div>
+           </div>
+           <div class="fluid-row">
+               <div class="span3">
+                    <h2>Test With Text</h2>
+                    <h5>In this version i try to implement the text under the header</h5>
+                    <div id="timeline4" style="width:500px;"></div>
+                </div>
+            </div>
 
-    <h1>Europe</h1>
-      <ul class="progressbar">
-        <li class="active">Natotea</li>
-        <li class="active">Sandro</li>
-        <li class="active">2Ahif </li>
-      </ul>
-    <h1>Asia</h1>
-      <ul class="progressbar">
-        <li class="active">Natotea</li>
-        <li class="active">Sandro</li>
-        <li class="active">2Ahif </li>
-      </ul>
-    <script>
-      // Get the modal
-      var modal = document.getElementById('login');
-      var modalForRegister = document.getElementById('register');
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-          else if (event.target == modalForRegister) {
-              modalForRegister.style.display = "none";
-          }
-      }
-    </script>
+      <script type="text/javascript">
+
+      var Films1 = [{name:"Day of the Fight", date: "1951-04-26", img: "http://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Day_of_the_Fight_title.jpg/215px-Day_of_the_Fight_title.jpg"},
+        {name:"The Seafarers", 	date:"1953-10-15", img: "http://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Seafarers_title.jpg/225px-Seafarers_title.jpg"},
+        {name:"Lolita (1962 film)", 	date:"1962-06-13", img: "http://upload.wikimedia.org/wikipedia/en/thumb/7/72/LolitaPoster.jpg/215px-LolitaPoster.jpg"},
+        {name:"Fear and Desire", date:	"1953-03-31", img: "http://upload.wikimedia.org/wikipedia/en/f/f7/Fear_and_Desire_Poster.jpg"},
+        {name:"Paths of Glory", date:	"1957-12-25", img: "http://upload.wikimedia.org/wikipedia/en/thumb/b/bc/PathsOfGloryPoster.jpg/220px-PathsOfGloryPoster.jpg"},
+        {name:"French Revolution", date:	"1989-07-14", img: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Jean_Duplessi-Bertaux_001.jpg"},
+        {name:"Killer's Kiss", date:	"1955-09-28", img: "http://upload.wikimedia.org/wikipedia/en/thumb/a/a6/KillersKissPoster.jpg/220px-KillersKissPoster.jpg"}
+      ];
+      TimeKnots.draw("#timeline1", Films1, {dateFormat: "%B %Y", color: "grey", width:1200, showLabels: true, labelFormat: "%Y"});
+      var Films2 = [{name:"Day of the Fight", date: "1940-04-26", img: "http://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Day_of_the_Fight_title.jpg/215px-Day_of_the_Fight_title.jpg"},
+        {name:"The Seafarers", 	date:"1953-10-15", img: "http://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Seafarers_title.jpg/225px-Seafarers_title.jpg"},
+        {name:"Lolita (1962 film)", 	date:"1962-06-13", img: "http://upload.wikimedia.org/wikipedia/en/thumb/7/72/LolitaPoster.jpg/215px-LolitaPoster.jpg"},
+        {name:"Fear and Desire", date:	"1953-03-31", img: "http://upload.wikimedia.org/wikipedia/en/f/f7/Fear_and_Desire_Poster.jpg"},
+        {name:"Paths of Glory", date:	"1957-12-25", img: "http://upload.wikimedia.org/wikipedia/en/thumb/b/bc/PathsOfGloryPoster.jpg/220px-PathsOfGloryPoster.jpg"},
+        {name:"French Revolution", date:	"1989-07-14", img: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Jean_Duplessi-Bertaux_001.jpg"},
+        {name:"Killer's Kiss", date:	"1955-09-28", img: "http://upload.wikimedia.org/wikipedia/en/thumb/a/a6/KillersKissPoster.jpg/220px-KillersKissPoster.jpg"}
+      ];
+      TimeKnots.draw("#timeline2", Films2, {dateFormat: "%B %Y", color: "grey", width:1200, showLabels: true, labelFormat: "%Y"});
+      var Films3 = [{name:"Day of the Fight", date: "1951-04-26", img: "http://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Day_of_the_Fight_title.jpg/215px-Day_of_the_Fight_title.jpg"},
+        {name:"The Seafarers", 	date:"1953-10-15", img: "http://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Seafarers_title.jpg/225px-Seafarers_title.jpg"},
+        {name:"Fear and Desire", date:	"1953-03-31", img: "http://upload.wikimedia.org/wikipedia/en/f/f7/Fear_and_Desire_Poster.jpg"},
+        {name:"Paths of Glory", date:	"1957-12-25", img: "http://upload.wikimedia.org/wikipedia/en/thumb/b/bc/PathsOfGloryPoster.jpg/220px-PathsOfGloryPoster.jpg"},
+        {name:"Killer's Kiss", date:	"1955-09-28", img: "http://upload.wikimedia.org/wikipedia/en/thumb/a/a6/KillersKissPoster.jpg/220px-KillersKissPoster.jpg"}
+      ];
+      TimeKnots.draw("#timeline3", Films3, {dateFormat: "%B %Y", color: "grey", width:1200, showLabels: true, labelFormat: "%Y"});
+      var Films4 = [{name:"Day of the Fight", date: "1951-04-26", img: "http://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Day_of_the_Fight_title.jpg/215px-Day_of_the_Fight_title.jpg"},
+        {name:"The Seafarers", 	date:"1953-10-15", img: "http://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Seafarers_title.jpg/225px-Seafarers_title.jpg"},
+        {name:"Paths of Glory", date:	"1957-12-25", img: "http://upload.wikimedia.org/wikipedia/en/thumb/b/bc/PathsOfGloryPoster.jpg/220px-PathsOfGloryPoster.jpg"},
+        {name:"Killer's Kiss", date:	"1955-09-28", img: "http://upload.wikimedia.org/wikipedia/en/thumb/a/a6/KillersKissPoster.jpg/220px-KillersKissPoster.jpg"}
+      ];
+      TimeKnots.draw("#timeline4", Films4, {dateFormat: "%B %Y", color: "grey", width:1200, showLabels: true, labelFormat: "%Y"});
+
+
+     // Get the modal
+     var modal = document.getElementById('login');
+     var modalForRegister = document.getElementById('register');
+     // When the user clicks anywhere outside of the modal, close it
+     window.onclick = function(event) {
+         if (event.target == modal) {
+             modal.style.display = "none";
+         }
+         else if (event.target == modalForRegister) {
+             modalForRegister.style.display = "none";
+         }
+     }
+     </script>
   </body>
 </html>
