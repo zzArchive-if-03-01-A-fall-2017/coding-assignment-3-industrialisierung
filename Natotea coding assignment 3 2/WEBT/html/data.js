@@ -33,9 +33,6 @@ window.onload = function()
     xhr.responseType = 'json';
     xhr.open('GET',url);
     xhr.setRequestHeader("Content-type","application/json");
-    var data = xhr.responseText;
-    var uploadResult = data['message']
-    console.log('responseText:',uploadResult);
 
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.status == 200) {
