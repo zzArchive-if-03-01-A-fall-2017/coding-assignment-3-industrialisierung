@@ -26,17 +26,16 @@ window.onload = function()
   }
   let loginButton = document.querySelector("#getLogin");
   loginButton.onclick = function() {
-    alert("Check if it goes in");
     let loginName = document.getElementById('userName').value;
     let loginPsw = document.getElementById('psw').value;
     let xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
-    xhr.open('GET',url);
+    xhr.open('GET',"../JSON/Storage.json",true);
     xhr.setRequestHeader("Content-type","application/json");
 
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.status == 200) {
-        alert("Login succesful");
+        alert("Welcome" + JSON.parse(xhr.response));
       }
     }
     xhr.send();
